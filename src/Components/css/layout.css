@@ -1,12 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
 
@@ -19,30 +14,32 @@ header {
    position: absolute;
    height: 100%;
    width: 100%;
-   background: linear-gradient(rgb(255, 255, 255, 0), rgb(255, 255, 255, 0)), url(../images/header-background.jpg) no-repeat top center;
-   background-size: cover !important;
-   background-attachment: fixed;
-	-webkit-background-size: cover !important;
+   background-color: rgb(58, 54, 54, 1);
    text-align: center;
    overflow: hidden;
    top: 0;
    left: 0;
+   right: 0;
+   outline: 0;
 }
 
 .nav {
+   width: 25%;
+   min-width: 350px;
    position: fixed;
    z-index: 10000;
    background-color: rgb(20, 22, 22);
-   display: inline-flex;
+   display: flex;
    justify-content: center;
    list-style: none;
    padding-left: 0;
-   margin-left: -207px;
+   left: 50%;
+   transform: translate(-51%, 0);
 }
 
 .nav li {
     display: inline-block;
-    padding: 20px 20px;
+    padding: 10px 10px;
     font-family: 'Source Sans Pro', sans-serif;
     color: white;
 }
@@ -61,7 +58,7 @@ a.smoothscroll:hover {
    position: relative;
    margin-top: 25vh;
    width: 50%;
-   min-width: 400px;
+   min-width: 350px;
    display: inline-block;
    background-color: rgb(20, 22, 22);
 }
@@ -69,29 +66,44 @@ a.smoothscroll:hover {
 .banner-text {
    color: white;
    width: 90%;
-   text-align: center;
-   padding-left: 5%;
+   display: inline-block;
 }
 
 .banner-text h1 {
    color: white;
    font-family: 'Jost', sans-serif;
-   font-size: 5vw;
+   font-size: calc(30px + 2.5vw);
    margin-bottom: 20px;
 }
 
+@keyframes animated-text {
+   from {width: 100px;}
+   to {width: 400px;}
+}
+ 
+ /* cursor animations */
+ 
+ @keyframes animated-cursor{
+   from {border-right-color: rgba(255, 255, 255, 1);}
+   to {border-right-color: transparent;}
+ }
+
 .banner-text h3 {
+   display: inline-block;
    font-family: 'Nunito', sans-serif;
+   font-weight: 200;
+   font-size: calc(10px + 0.55vw);
 }
 
 .social {
-   display: flex;
+   display: inline-flex;
    justify-content: center;
    list-style: none;
+   padding: 0;
 }
 
 .social li {
-   padding: 10px 20px;
+   padding: 5px 1vw;
 }
 
 @keyframes bounce {
@@ -124,7 +136,7 @@ a.smoothscroll:hover {
 }
 
 .button-down a img:hover {
-   background-color: rgb(240, 62, 62);
+   background-color: rgb(133, 78, 78);
 }
 
 /* General Layout */
@@ -135,10 +147,8 @@ a.smoothscroll:hover {
    top: 100%;
    left: 0;
    right: 0;
-   background: linear-gradient(rgb(255, 255, 255, 0), rgb(255, 255, 255, 0)), url(../images/header-background.jpg) no-repeat top center;
-   background-size: cover !important;
-   background-attachment: fixed;
-	-webkit-background-size: cover !important;
+   background-color: rgb(58, 54, 54);
+   outline: none;
 }
 
 .inactive {
@@ -151,7 +161,7 @@ a.smoothscroll:hover {
    display: inline-block;
    background-color: rgb(56, 47, 47);
    width: 50%;
-   min-width: 400px;
+   min-width: 350px;
    padding: 50px 1px;
    text-align: left;
    margin-bottom: 100px;
@@ -165,14 +175,15 @@ a.smoothscroll:hover {
 }
 
 img.profile-pic {
-   width: 300px;
+   width: 30%;
+   min-width: 300px;
    overflow: hidden;
 }
 
 .about-info {
    width: 30%;
    padding-left: 50px;
-   min-width: 350px;
+   min-width: 300px;
    justify-content: space-around;
 }
 
@@ -182,16 +193,19 @@ img.profile-pic {
 
 .about-info h2 {
    color: white;
-   font-family: 'Fredoka One', cursive;
+   font-family: 'Jost', sans-serif;
    font-weight: 100;
 }
 
 .about-info p {
    color: rgba(211, 211, 211, 0.623);
+   font-family: 'Nunito', sans-serif;
+   font-size: 14px;
+   width: 90%;
 }
 
 .about-info .row .contact-details .contact a:hover {
-   color: rgb(75, 114, 241)
+   color: rgb(150, 169, 233)
 }
 
 .about-info .row .contact-details .contact span {
@@ -203,6 +217,8 @@ img.profile-pic {
    padding-top: 80px;
    width: 45%;
    box-sizing: border-box;
+   font-family: 'Nunito', sans-serif;
+   font-size: 14px;
 }
 
 .download a {
@@ -221,10 +237,10 @@ img.profile-pic {
 /* Experience Section */
 #resume {
    width: 50%;
-   min-width: 400px;
+   min-width: 350px;
    display: inline-block;
    margin-bottom: 100px;
-   background-color: rgb(194, 187, 191);
+   background-color: rgb(56, 47, 47);
    text-align: left;
 }
 
@@ -246,7 +262,7 @@ img.profile-pic {
 }
 
 .active {
-   background-color: darkgrey !important;
+   background-color: rgb(93, 99, 104) !important;
 }
 
 .tablinks {
@@ -259,6 +275,7 @@ img.profile-pic {
    text-transform: uppercase;
    font-family: 'Teko', sans-serif;
    font-size: 18px;
+   background-color: rgb(78, 68, 68);
 }
 
 button:focus {
@@ -268,14 +285,19 @@ button:focus {
 .tabcontent {
    width: 60%;
    padding-left: 50px;
-   min-width: 350px;
+   min-width: 300px;
    margin-top: 20px;
    padding-bottom: 30px;
 }
 
 h1.heading {
-   font-family: 'Libre Baskerville', serif;
-   font-weight: 800;
+   font-family: 'Jost', sans-serif;
+   font-weight: 600;
+}
+
+h3.info-location {
+   font-family: 'Jost', sans-serif;
+   font-weight: 600;
 }
 
 em.title {
@@ -287,8 +309,8 @@ span.date {
 }
 
 .expand {
-   background-color: #eee;
-   color: #444;
+   background-color: rgb(78, 68, 68);
+   color: rgb(199, 192, 192);
    cursor: pointer;
    padding: 18px;
    width: 90%;
@@ -296,10 +318,11 @@ span.date {
    text-align: left;
    outline: none;
    font-size: 15px;
+   font-family: 'Jost', sans-serif;
 }
  
 .expand:hover, .tablinks:hover {
-   background-color: #ccc;
+   background-color: rgb(121, 96, 96);
 }
 
 .courses {
@@ -312,12 +335,12 @@ span.date {
    margin: 0;
    padding: 10px;
    line-height: 1.5;
-   font-family: 'Ubuntu', sans-serif;
+   font-family: 'Nunito', sans-serif;
 }
 
 ul.work-info {
    width: 90%;
-   font-family: 'Ubuntu', sans-serif;
+   font-family: 'Nunito', sans-serif;
    line-height: 1.5;
    padding-inline-start: 20px;
    list-style: square;
@@ -349,16 +372,16 @@ ul.skills li div.skills-bar {
 .skills-bar .skills-bar-color {
    height: 100%;
    border-radius: 1em;
-   background-color: rgb(0, 255, 115);
+   background-color: rgb(50, 187, 112);
 }
 
 /* Projects page */
 
 #portfolio {
    display: inline-block;
-   background-color: rgb(250, 193, 89);
-   width: 60%;
-   min-width: 400px;
+   background-color: rgb(56, 47, 47);
+   width: 50.1%;
+   min-width: 350px;
    padding: 10px 0 30px;
    margin-bottom: 30px;
 }
@@ -368,11 +391,12 @@ ul.skills li div.skills-bar {
 }
 
 #portfolio .row h1 {
-   font-family: 'Play', sans-serif;
+   font-family: 'Jost', sans-serif;
+   font-weight: 500;
+   color: white;
    height: 40px;
    width: 200px;
    display: inline-block;
-   background-color: rgb(171, 199, 69);
    padding: 0;
    margin-top: 20px;
    padding-top: 5px;
@@ -388,7 +412,7 @@ ul.skills li div.skills-bar {
    display: inline-flex;
    justify-content: center;
    width: 80%;
-   background-color: rgb(96, 150, 201);
+   background-color: rgb(93, 99, 104);
    align-items: center;
    flex-wrap: wrap;
    margin: 20px 0;
@@ -406,15 +430,16 @@ li div.project-info {
 }
 
 .project-info h3 {
-   font-family: 'Permanent Marker', cursive;
+   font-family: 'Jost', sans-serif;
    font-size: 23px;
    margin: 20px 0 10px 0;
 }
 
 .project-info p {
-   font-family: 'Source Sans Pro', sans-serif;
+   font-family: 'Nunito', sans-serif;
+   color: rgb(15, 13, 13);
    font-size: 14px;
-   font-weight: 100;
+   font-weight: 600;
    margin: 0;
 }
 
@@ -446,25 +471,25 @@ footer {
 
 .button-top {
    display: inline-block;
-   margin-top: -25px;
+   width: 100%;
+}
+
+footer .button-top a img {
    width: 50px;
    height: 50px;
+   margin-top: -25px;
    border-radius: 50%;
    background-color: grey;
 }
 
-.button-top:hover {
-   background-color: rgb(240, 62, 62);
+.button-top a img:hover {
+   background-color: rgb(133, 78, 78);
 }
 
-footer a img {
-   width: 50px;
-   height: 50px;
-}
 
-footer h2 {
+footer p {
    color: white;
-   margin-top: 3;
-   font-family: 'Dancing Script', cursive;
-   font-size: 40px;
+   margin-top: 0;
+   font-family: 'Jost', sans-serif;
+   font-size: 10px;
 }

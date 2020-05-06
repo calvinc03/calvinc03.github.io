@@ -12,7 +12,7 @@
     "react-ga": "^2.7.0",
     "react-scripts": "3.4.1"
   },
-  "homepage": "https://calvinc03.github.io",
+  "homepage": "https://calvinc03.github.io/website",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

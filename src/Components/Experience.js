@@ -49,7 +49,7 @@ class Experience extends Component {
           <div className={tabs === "education"? "tabcontent active" : "inactive"} id="education">  
             <h1 className="heading">Education</h1>
             <div>
-              <h3>University of British Columbia</h3>
+              <h3 className="info-location">University of British Columbia</h3>
               <p className="info"> 
                 <em className="title"> Bachelors of Science </em>
                 <span>&bull;</span>
@@ -78,7 +78,7 @@ class Experience extends Component {
         <div className={tabs === "work"? "tabcontent active" : "inactive"} id="work">
           <h1 className="heading">Work</h1>
           <div>
-            <h3>Eventbase Technology</h3>
+            <h3 className="info-location">Eventbase Technology</h3>
             <p className="info"> 
               <em className="title"> Quality Assurance Engineer Intern</em>
               <span>&bull;</span>

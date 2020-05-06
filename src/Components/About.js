@@ -5,10 +5,7 @@ class About extends Component {
    return (
       <section id="about">
          <div className="row">
-            <div className="about-pic">
-               {/*Need to replace photo here*/}
-               <img className="profile-pic"  src="https://www.dropbox.com/s/cd773atqe4i7b08/profile.jpg?raw=1" alt="Calvin Chen Profile Pic" />
-            </div>
+            <img className="profile-pic"  src="https://www.dropbox.com/s/cd773atqe4i7b08/profile.jpg?raw=1" alt="Calvin Chen Profile Pic" />
             <div className="about-info">
                <h2>About Me</h2>
                <p>As a student of UBC, I am constantly honing my skills in software and web development. Insert text about how I am a 

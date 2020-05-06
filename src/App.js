@@ -8,25 +8,19 @@ import Experience from './Components/Experience';
 import Portfolio from './Components/Portfolio';
 
 class App extends Component {
-
-  constructor(props){
-    super(props);
-
-    ReactGA.initialize('UA-110570651-1');
-    ReactGA.pageview(window.location.pathname);
-
-  }
-
   render() {
     return (
-      <div className="App">
+      <div className="app">
+        <div className="body-container">
         <Header/>
         <div className="container">
           <About/>
           <Experience/>
           <Portfolio/>
           <Footer/>
-        </div>  
+        </div>
+        </div>
+          
       </div>
     );
   }
