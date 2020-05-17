@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Fade from 'react-reveal/Fade';
 
 class Experience extends Component {
 
@@ -39,6 +40,7 @@ class Experience extends Component {
     const {tabs, CPSC210, CPSC320, CPSC340, CPSC317} = this.state;
     return (
       <section id="resume">
+        <Fade bottom >
         <div className="row">
           <div className="tab">
             <button className={tabs === "education"? "tablinks active" : "tablinks"} onClick={() => this.openTab("education")}>Education</button>
@@ -142,6 +144,7 @@ class Experience extends Component {
           </ul>
         </div>
       </div>  
+      </Fade>
     </section>
     );
   }

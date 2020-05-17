@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import Fade from 'react-reveal/Fade';
 
 class Portfolio extends Component {
   render() {
     return (
       <section id="portfolio">
+        <Fade bottom>
         <div className="row">
           <h1>Projects</h1>
           <ul className="projects">
@@ -52,6 +54,7 @@ class Portfolio extends Component {
             </li>
           </ul> 
         </div>
+        </Fade>
       </section>
     );
   }

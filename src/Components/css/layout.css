@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
@@ -9,39 +8,274 @@
    scroll-behavior: smooth;
 }
 
-/* A. Header Styling */
-header {
+#home-background {
    position: absolute;
    height: 100%;
    width: 100%;
-   background-color: rgb(58, 54, 54, 1);
+   background: url(../images/header-background.jpg) no-repeat top center;
+   background-size: cover !important;
+   background-attachment: fixed;
+   -webkit-background-size: cover !important;
    text-align: center;
    overflow: hidden;
    top: 0;
    left: 0;
    right: 0;
    outline: 0;
+   z-index: 1;
+   animation: fade-in 4s steps(1) 1;
+}
+
+
+/* INTRO SCREEN */
+#intro-screen {
+   background-color: black;
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   left: 0;
+   right: 0;
+   top: 0;
+   text-align: center;
+   z-index: 10;
+}
+
+.number-counter {
+   margin-top: 30vh;
+}
+
+.box, .percent, .first-num {
+   display: inline-block;
+   overflow: hidden;
+   height: 1em;
+   line-height: 1em;
+   font-weight: bold;
+   font-size: calc(30px + 5vw);
+   color: white;
+   font-family: 'Source Sans Pro', sans-serif;
+}
+
+.percent {
+   font-size: calc(30px + 5vw);
+   user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+.box:after {
+   position: relative;
+   white-space: pre;
+   content: "0\A 1\A 2\A 3\A 4\A 5\A 6\A 7\A 8\A 9\A"
+}
+
+.first-num {
+   animation: hide 5s steps(1, end) 1;
+   user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none; 
+}
+
+.box.second-number {
+   animation: hide 0.5s steps(1, end) 1; 
+}
+
+.box.second-number:after {
+   animation: count 5s steps(10) 1;
+}
+
+.box.third-number:after {
+   animation: count 0.5s steps(10) 10;
+}
+
+@keyframes count {
+   from {top: 0} to {top: -10em} 
+}
+
+@keyframes hide {
+   from {opacity: 0} to {opacity: 1};
+}
+
+.mario-gif {
+   width: 80%;
+   display: inline-block;
+   padding-top: 10%;
+   text-align: left;
+}
+
+.mario-jump {
+   width: 5%;
+   user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -o-user-select: none;
+}
+
+.mario-run {
+   animation: move-right 5s 0.25s linear;
+   width: 100%;
+}
+
+.mario-gif img {
+   width: 100%;
+   min-width: 20px;
+}
+
+@keyframes move-right{
+   from {transform: translateX(0)} to {transform: translateX(80vw)}
+}
+
+#intro-screen:active .mario-jump {
+   animation: jump 1s 
+} 
+
+@keyframes jump {
+   from, to {transform: translateY(-100%)}
+}
+
+.progress-bar {
+   display: inline-block;
+   width: 80%;
+   margin-top: 1vh;
+   height: 10%;
+}
+
+.progress-bar h2 {
+   color: white;
+   z-index: 1000000;
+   position: relative;
+   font-family: 'Source Sans Pro', sans-serif;
+   margin: 0;
+   top: 50%;
+   transform: translateY(-50%)
+}
+
+.moving-bar {
+   position: absolute;
+   border-radius: 2em;
+   height: 10%;
+   width: 80%;
+   background-color: green;
+   animation: slide-left-mario 5s linear, change-color 5s linear;
+   z-index: 100;
+}
+
+@keyframes slide-left-mario {
+   from {width: 0} to {width: 80%;}
+}
+
+@keyframes change-color {
+   from {background-color: red} to {background-color: green}
+}
+
+/* A. Header Styling */
+header {
+   text-align: center;
+   top: 0;
+   left: 0;
+   right: 0;
+   outline: 0;
+}
+
+#home {
+   display: none;
+}
+
+@keyframes fade-in {
+   from {opacity: 0}
+   to {opacity: 1}
+}
+
+#nav-wrap {
+   top: 0;
+   left: 0;
+   width: 100%;
+   position: fixed;
+   z-index: 10000;
+   background-color: rgb(20, 22, 22); 
+   text-align: center;
+}
+
+.inactive-nav {
+   animation: hide 0.5s;
+   display: none;
 }
 
 .nav {
-   width: 25%;
+   width: 50%;  
    min-width: 350px;
-   position: fixed;
-   z-index: 10000;
-   background-color: rgb(20, 22, 22);
-   display: flex;
-   justify-content: center;
+   display: inline-flex;
+   justify-content: space-between;
    list-style: none;
    padding-left: 0;
-   left: 50%;
-   transform: translate(-51%, 0);
+   align-items: center;
+   height: 80px;
+}
+
+.homebutton {
+   border: white 2px solid;
+   padding: 10px;
+   font-family: 'Source Sans Pro', sans-serif;
+   color: white;
+}
+
+.homebutton:hover {
+   color: orange;
+}
+
+.menu-bar {
+   position: relative;
+   overflow: hidden;
+   padding-inline-start: 0;
+   width: 40%;
+   min-width: 300px;
+}
+
+.menu-animation {
+   background-color: white;
+   border-radius: 2em;
+   animation: slide-left 1.5s;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+}
+
+@keyframes slide-left {
+   from {width: 0}
+   to {width: 100%}
+}
+
+.menu-button {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   background-color: white;
+   cursor: pointer;
+   outline: 0;
+}
+
+
+.nav img {
+   background-color: white;
+   border-radius: 50%;
+   cursor: pointer;
 }
 
 .nav li {
-    display: inline-block;
-    padding: 10px 10px;
-    font-family: 'Source Sans Pro', sans-serif;
-    color: white;
+   display: inline-block;
+   padding: 10px 10px;
+   font-family: 'Source Sans Pro', sans-serif;
+   
+    
+}
+
+.nav li a {
+   color: rgb(20, 22, 22);
 }
 
 a {
@@ -55,6 +289,8 @@ a.smoothscroll:hover {
 
 
 .row-banner {
+   animation: fade-in 2s 1;
+   z-index: 10;
    position: relative;
    margin-top: 25vh;
    width: 50%;
@@ -69,24 +305,16 @@ a.smoothscroll:hover {
    display: inline-block;
 }
 
-.banner-text h1 {
+.banner-text .Typewriter, .banner-text h1 {
    color: white;
    font-family: 'Jost', sans-serif;
    font-size: calc(30px + 2.5vw);
    margin-bottom: 20px;
 }
 
-@keyframes animated-text {
-   from {width: 100px;}
-   to {width: 400px;}
+.banner-text h1 {
+   margin-top: 0px;
 }
- 
- /* cursor animations */
- 
- @keyframes animated-cursor{
-   from {border-right-color: rgba(255, 255, 255, 1);}
-   to {border-right-color: transparent;}
- }
 
 .banner-text h3 {
    display: inline-block;
@@ -121,10 +349,14 @@ a.smoothscroll:hover {
 }
 
 .button-down {
-   display: inline-block;
+   z-index: 10;
+   position: relative;
    margin-top: 10vh;
    width: 51%;
-   border-top: rgb(31, 26, 26) solid 8px;
+   min-width: 350px;
+   display: inline-block;
+   border-top: rgb(20, 22, 22) solid 8px;
+   animation: fade-in 2s 1;
 }
 
 .button-down a img {
@@ -141,7 +373,8 @@ a.smoothscroll:hover {
 
 /* General Layout */
 
-.container {
+#container {
+   z-index: 10;
    position: absolute;
    text-align: center;
    top: 100%;
@@ -149,6 +382,7 @@ a.smoothscroll:hover {
    right: 0;
    background-color: rgb(58, 54, 54);
    outline: none;
+   display: none;
 }
 
 .inactive {
@@ -159,25 +393,29 @@ a.smoothscroll:hover {
 
 #about {
    display: inline-block;
-   background-color: rgb(56, 47, 47);
-   width: 50%;
-   min-width: 350px;
-   padding: 50px 1px;
-   text-align: left;
-   margin-bottom: 100px;
+   background-color: #daad86;
+   width: 100%;
+   padding: 50px 0px;
+   text-align: center;
 }
 
 #about .row {
-   display: flex;
+   display: inline-flex;
    justify-content: center;
    flex-wrap: wrap;
    box-sizing: border-box;
+   width: calc(50% - 50px);
+   min-width: 350px;
+   text-align: left;
+   align-items: center;
 }
 
 img.profile-pic {
    width: 30%;
    min-width: 300px;
    overflow: hidden;
+   height: calc(4 * 13vw / 3);
+   min-height: 400px;
 }
 
 .about-info {
@@ -189,32 +427,40 @@ img.profile-pic {
 
 .about-info .row .contact-details{
    width: 55%;
+   text-align: left;
 }
 
 .about-info h2 {
-   color: white;
+   color: black;
    font-family: 'Jost', sans-serif;
    font-weight: 100;
 }
 
 .about-info p {
-   color: rgba(211, 211, 211, 0.623);
+   color: rgb(68, 63, 63);
    font-family: 'Nunito', sans-serif;
    font-size: 14px;
    width: 90%;
 }
 
-.about-info .row .contact-details .contact a:hover {
-   color: rgb(150, 169, 233)
+.about-info .row-contact .contact-details .contact {
+   margin-top: 0;
 }
 
-.about-info .row .contact-details .contact span {
+.about-info .row-contact .contact-details .contact a {
+   color: rgb(68, 63, 63);
+}
+
+.about-info .row-contact .contact-details .contact a:hover {
+   color: rgb(57, 93, 212)
+}
+
+.about-info .row-contact .contact-details .contact span {
    font-size: 20px;
 }
 
-.about-info .row .download {
-   padding-left: 10px;
-   padding-top: 80px;
+.about-info .row-contact .download {
+   padding-top: 10px;
    width: 45%;
    box-sizing: border-box;
    font-family: 'Nunito', sans-serif;
@@ -236,20 +482,21 @@ img.profile-pic {
 
 /* Experience Section */
 #resume {
-   width: 50%;
-   min-width: 350px;
+   width: 100%;
    display: inline-block;
-   margin-bottom: 100px;
-   background-color: rgb(56, 47, 47);
-   text-align: left;
+   background-color: #d6fc98;
+   text-align: center;
+   padding: 30px 0 80px 0;
 }
 
 #resume .row {
-   display: flex;
+   display: inline-flex;
    justify-content: center;
    flex-wrap: wrap;
    box-sizing: border-box;
-   padding-bottom: 50px;
+   width: 50%;
+   min-width: 350px;
+   text-align: left;
 }
 
 .tab {
@@ -262,7 +509,7 @@ img.profile-pic {
 }
 
 .active {
-   background-color: rgb(93, 99, 104) !important;
+   background-color: #c2cad0 !important;
 }
 
 .tablinks {
@@ -275,7 +522,7 @@ img.profile-pic {
    text-transform: uppercase;
    font-family: 'Teko', sans-serif;
    font-size: 18px;
-   background-color: rgb(78, 68, 68);
+   background-color: #c2b9b0;
 }
 
 button:focus {
@@ -291,7 +538,7 @@ button:focus {
 }
 
 h1.heading {
-   font-family: 'Jost', sans-serif;
+   font-family: 'Nunito', sans-serif;
    font-weight: 600;
 }
 
@@ -309,8 +556,8 @@ span.date {
 }
 
 .expand {
-   background-color: rgb(78, 68, 68);
-   color: rgb(199, 192, 192);
+   background-color: #c2b9b0;
+   color: #7e685a;
    cursor: pointer;
    padding: 18px;
    width: 90%;
@@ -318,11 +565,12 @@ span.date {
    text-align: left;
    outline: none;
    font-size: 15px;
+   font-weight: bold;
    font-family: 'Jost', sans-serif;
 }
  
 .expand:hover, .tablinks:hover {
-   background-color: rgb(121, 96, 96);
+   background-color: rgb(236, 213, 213);
 }
 
 .courses {
@@ -379,21 +627,24 @@ ul.skills li div.skills-bar {
 
 #portfolio {
    display: inline-block;
-   background-color: rgb(56, 47, 47);
-   width: 50.1%;
+   background-color: #c2cad0;
+   width: 100%;
    min-width: 350px;
    padding: 10px 0 30px;
-   margin-bottom: 30px;
+   text-align: center;
+   padding-bottom: 100px;
 }
 
 #portfolio .row {
-   text-align: center;
+   width: 50%;
+   min-width: 350px;
+   display: inline-block;
 }
 
 #portfolio .row h1 {
    font-family: 'Jost', sans-serif;
    font-weight: 500;
-   color: white;
+   color: black;
    height: 40px;
    width: 200px;
    display: inline-block;
@@ -412,7 +663,7 @@ ul.skills li div.skills-bar {
    display: inline-flex;
    justify-content: center;
    width: 80%;
-   background-color: rgb(93, 99, 104);
+   background-color: #bc986a;
    align-items: center;
    flex-wrap: wrap;
    margin: 20px 0;
@@ -433,11 +684,12 @@ li div.project-info {
    font-family: 'Jost', sans-serif;
    font-size: 23px;
    margin: 20px 0 10px 0;
+   color: black;
 }
 
 .project-info p {
    font-family: 'Nunito', sans-serif;
-   color: rgb(15, 13, 13);
+   color: rgb(68, 63, 63);
    font-size: 14px;
    font-weight: 600;
    margin: 0;
@@ -453,10 +705,10 @@ li div.project-info {
 
 .language-container span.languages {
    margin-right: 10px;
-   background-color: rgb(236, 234, 92);
+   background-color: #fbeec1;
    padding: 0 5px;
    font-weight: 100;
-   font-family: 'Fredoka One', cursive;
+   font-family: 'Jost', sans-serif;
 }
 
 /* FOOTER SECTION*/
@@ -465,7 +717,6 @@ footer {
    background-color: black;
    width: 100%;
    height: 20vh;
-   margin-top: 50px;
    text-align: center;
 }
 

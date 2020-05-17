@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import Fade from 'react-reveal/Fade';
 
 class About extends Component {
   render() {
    return (
       <section id="about">
+         <Fade bottom>
          <div className="row">
             <img className="profile-pic"  src="https://www.dropbox.com/s/cd773atqe4i7b08/profile.jpg?raw=1" alt="Calvin Chen Profile Pic" />
             <div className="about-info">
@@ -12,7 +14,7 @@ class About extends Component {
                   hardworking individual and that I am developing skills as this industry is constantly evolving. <br/> <br/>
                   In my free time, I have no idea what to write but I'm just filling in the space rn. My profile pic needs changing too :(
                </p>
-               <div className="row">
+               <div className="row-contact">
                   <div className="contact-details">
                      <h2>Contact Details</h2>
                      <p className="contact">
@@ -29,6 +31,7 @@ class About extends Component {
                </div>
             </div>
          </div>
+         </Fade>
       </section>
     );
   }
