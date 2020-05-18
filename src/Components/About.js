@@ -18,7 +18,6 @@ class About extends Component {
                   <div className="contact-details">
                      <h2>Contact Details</h2>
                      <p className="contact">
-                        <span>Calvin Chen</span><br /><br />
                         <a href="tel:604-218-7779">(604) 218-7779</a><br />
                         {/*Have it so that clicking on the phone would open phone app*/}
                         <a href="mailto:chencalvin.15@gmail.com">chencalvin.15@gmail.com</a>

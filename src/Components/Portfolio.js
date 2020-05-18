@@ -4,13 +4,13 @@ import Fade from 'react-reveal/Fade';
 class Portfolio extends Component {
   render() {
     return (
-      <section id="portfolio">
-        <Fade bottom>
+      <section id="portfolio">  
         <div className="row">
           <h1>Projects</h1>
           <ul className="projects">
+            <Fade left>
             <li>
-              <img className="project-pic" src="https://img.icons8.com/bubbles/500/000000/discord-logo.png" alt="discord-bot"/>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/calvinc03/Discord-Bot"><img className="project-pic" src="https://img.icons8.com/bubbles/500/000000/discord-logo.png" alt="discord-bot"/></a>
               <div className="project-info">
                 <h3>Discord Bot</h3>
                 <p>A client bot to enhance the daily functions and messaging platform of the Discord Application. 
@@ -21,8 +21,10 @@ class Portfolio extends Component {
                 </div>
               </div>
             </li>
+            </Fade>
+            <Fade left>
             <li>
-              <img className="project-pic" src="https://img.icons8.com/office/480/000000/ftp.png" alt="ftp"/>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/calvinc03/FTP-Application"><img className="project-pic" src="https://img.icons8.com/office/480/000000/ftp.png" alt="ftp"/></a>
               <div className="project-info">
                 <h3>FTP Server</h3>
                 <p>
@@ -36,8 +38,10 @@ class Portfolio extends Component {
                 </div>
               </div>
             </li>
+            </Fade>
+            <Fade left>
             <li>
-              <img className="project-pic" src="https://img.icons8.com/bubbles/500/000000/bus.png" alt="bus"/>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/calvinc03/Bus-Application"><img className="project-pic" src="https://img.icons8.com/bubbles/500/000000/bus.png" alt="bus"/></a>
               <div className="project-info">
                 <h3>Buses R Us</h3>
                 <p>
@@ -52,9 +56,9 @@ class Portfolio extends Component {
                 </div>
               </div>
             </li>
+            </Fade>
           </ul> 
         </div>
-        </Fade>
       </section>
     );
   }

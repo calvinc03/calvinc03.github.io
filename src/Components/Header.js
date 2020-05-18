@@ -40,12 +40,6 @@ class Header extends Component {
        })
    }
 
-   showMenu() {
-      this.setState({
-         menu: true
-      })
-   }
-
    hideMenu() {
       this.setState({
          menu: false
@@ -71,7 +65,6 @@ class Header extends Component {
                      type="image" 
                      src={menu? "https://img.icons8.com/material/40/000000/cancel--v1.png" : "https://img.icons8.com/ios/40/000000/xbox-menu.png"} 
                      alt="menu" 
-                     onMouseEnter={() => this.showMenu()}
                      onClick={() => this.changeMenu()}
                   ></input> 
                </div>
@@ -83,7 +76,7 @@ class Header extends Component {
                   <Typewriter
                      options={{
                         strings: ['Здравствуйте', 'Hello', 'Hi', 'Bonjour', 'Hola', '你好', 'Salve', 'שלום', 'Сайн уу', 
-                        'Ahoj', '여보',  'こんにちは', 'Zdravo', 'Χαίρετε', 'નમસ્તે', 'Halló', 'Szia'],
+                        'Ahoj', '안녕하세요',  'こんにちは', 'Zdravo', 'Χαίρετε', 'નમસ્તે', 'Halló', 'Szia'],
                         autoStart: true,
                         loop: true
                      }}
@@ -91,6 +84,7 @@ class Header extends Component {
                   <h1>
                      I'm Calvin Chen.
                   </h1>
+                  <h3>I am a 4th year Math and Computer Science student and an aspiring software developer with a keen interest on problem solving and learning new technologies.</h3>
                   <hr />
                   <ul className="social">
                      <li><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/calvin.chen.125"><img src="https://img.icons8.com/doodle/48/000000/facebook-new.png" alt="facebook"/></a></li>
