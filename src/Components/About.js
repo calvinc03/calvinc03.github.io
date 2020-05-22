@@ -19,12 +19,11 @@ class About extends Component {
                      <h2>Contact Details</h2>
                      <p className="contact">
                         <a href="tel:604-218-7779">(604) 218-7779</a><br />
-                        {/*Have it so that clicking on the phone would open phone app*/}
                         <a href="mailto:chencalvin.15@gmail.com">chencalvin.15@gmail.com</a>
                      </p>
                   </div>
                   <div className="download">
-                     {/*Figure something out with this as my resume is a word doc. Could probably still work*/}
+                     {/* TODO maybe export as pdf*/}
                      <a href="https://docs.google.com/document/d/1xxoSXlCWQ0m9eIiHT-5xeqStrqWsVt-LZKD0Tv4bxpk/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="button">View Resume</a>
                   </div>
                </div>

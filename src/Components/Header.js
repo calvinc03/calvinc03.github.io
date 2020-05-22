@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Typewriter from 'typewriter-effect';
-import './css/layout.css'
 
 class Header extends Component {
    constructor(props) {
@@ -8,8 +7,7 @@ class Header extends Component {
   
       this.state = {
         prevScrollpos: window.pageYOffset,
-        visible: true,
-        menu: false
+        visible: true
       };
    }
   
@@ -27,6 +25,11 @@ class Header extends Component {
    handleScroll = () => {
       const currentScrollPos = window.pageYOffset;
       const currentVisible = this.state.prevScrollpos > currentScrollPos;
+
+      if (currentScrollPos <= 200) 
+         document.getElementById("nav-wrap").style.backgroundColor="rgb(1,1,1, 0)";
+      else
+         document.getElementById("nav-wrap").style.backgroundColor="rgb(20, 22, 22)";
   
       this.setState({
         prevScrollpos: currentScrollPos,
@@ -34,39 +37,19 @@ class Header extends Component {
       });
    };
 
-   changeMenu() {
-       this.setState({
-          menu: !this.state.menu
-       })
-   }
-
-   hideMenu() {
-      this.setState({
-         menu: false
-      })
-   }
-
    render() {
-      const { visible, menu } = this.state
+      const { visible } = this.state
       return (
          <header id="home">
             <div className="header-container">
-            <nav id="nav-wrap" onMouseLeave={() => this.hideMenu()}>
+            <nav id="nav-wrap">
                <div className={visible? "nav" : "inactive-nav"} >
-                  <a className={menu? "inactive" : "homebutton"} href="#home">Calvin Chen</a>
-                  <ul className={menu? "menu-bar" : "inactive"}>
-                     <div className="menu-animation"></div>
+                  <a className="homebutton" href="#home">CC</a>
+                  <ul className="menu-bar">
                      <li><a className="smoothscroll" href="#about">ABOUT</a></li>
                      <li><a className="smoothscroll" href="#resume">EXPERIENCE</a></li>
                      <li><a className="smoothscroll" href="#portfolio">PROJECTS</a></li>
                   </ul>
-                  <input 
-                     className="menu-button" 
-                     type="image" 
-                     src={menu? "https://img.icons8.com/material/40/000000/cancel--v1.png" : "https://img.icons8.com/ios/40/000000/xbox-menu.png"} 
-                     alt="menu" 
-                     onClick={() => this.changeMenu()}
-                  ></input> 
                </div>
                
             </nav>
@@ -75,7 +58,7 @@ class Header extends Component {
                <div className="banner-text">
                   <Typewriter
                      options={{
-                        strings: ['Здравствуйте', 'Hello', 'Hi', 'Bonjour', 'Hola', '你好', 'Salve', 'שלום', 'Сайн уу', 
+                        strings: ['Hello', 'Hi', 'Bonjour', 'Здравствуйте', 'Hola', '你好', 'Salve', 'שלום', 'Сайн уу', 
                         'Ahoj', '안녕하세요',  'こんにちは', 'Zdravo', 'Χαίρετε', 'નમસ્તે', 'Halló', 'Szia'],
                         autoStart: true,
                         loop: true
@@ -84,22 +67,17 @@ class Header extends Component {
                   <h1>
                      I'm Calvin Chen.
                   </h1>
-                  <h3>I am a 4th year Math and Computer Science student and an aspiring software developer with a keen interest on problem solving and learning new technologies.</h3>
+                  <h3>4th year Math + Computer Science Major <br/>Aspiring Software Developer </h3>
                   <hr />
                   <ul className="social">
-                     <li><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/calvin.chen.125"><img src="https://img.icons8.com/doodle/48/000000/facebook-new.png" alt="facebook"/></a></li>
-                     <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/calvin-chen-aa9139184/"><img src="https://img.icons8.com/doodle/48/000000/linkedin--v2.png" alt="linkedin"/></a></li>
-                     <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/calvinc03"><img src="https://img.icons8.com/doodle/48/000000/github--v1.png" alt="github"/></a></li>
-                     <li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/calvinchen8/"><img src="https://img.icons8.com/doodle/48/000000/instagram-new.png" alt="instagram" /></a></li>
+                     <li><a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/calvin.chen.125"><img src="https://img.icons8.com/fluent/48/000000/facebook-new.png"/></a></li>
+                     <li><a target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/calvin-chen-aa9139184/"><img src="https://img.icons8.com/color/48/000000/linkedin.png"/></a></li>
+                     <li><a target="_blank" rel="noopener noreferrer" href="https://github.com/calvinc03"><img src="https://img.icons8.com/dusk/64/000000/github.png"/></a></li>
+                     <li><a target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/calvinchen8/"><img src="https://img.icons8.com/color/48/000000/instagram.png"/></a></li>
                   </ul>
                </div>
             </div>
 
-            <div className="button-down">
-               <a href="#about">
-                  <img src="https://img.icons8.com/plasticine/100/000000/thick-arrow-pointing-down.png" alt="arrow"/>
-               </a>
-            </div>
             </div>
          </header>
       );
