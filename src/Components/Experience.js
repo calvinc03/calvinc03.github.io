@@ -42,14 +42,13 @@ class Experience extends Component {
       <section id="resume">
         <Fade bottom >
         <div className="row">
-          <div className="tab">
-            <button className={tabs === "education"? "tablinks active" : "tablinks"} onClick={() => this.openTab("education")}>Education</button>
-            <button className={tabs === "work"? "tablinks active" : "tablinks"} onClick={() => this.openTab("work")}>Work</button>
-            <button className={tabs === "skills"? "tablinks active" : "tablinks"} onClick={() => this.openTab("skills")}>Skills</button>
-          </div>
+          <ul className="tab">
+            <li className={tabs === "education"? "tablinks active" : "tablinks"} onClick={() => this.openTab("education")}>Education<div className="underline"></div></li>
+            <li className={tabs === "work"? "tablinks active" : "tablinks"} onClick={() => this.openTab("work")}>Work<div className="underline"></div></li>
+            <li className={tabs === "skills"? "tablinks active" : "tablinks"} onClick={() => this.openTab("skills")}>Skills<div className="underline"></div></li>
+          </ul>
 
           <div className={tabs === "education"? "tabcontent active" : "inactive"} id="education">  
-            <h1 className="heading">Education</h1>
             <div>
               <h3 className="info-location">University of British Columbia</h3>
               <p className="info"> 
@@ -78,7 +77,6 @@ class Experience extends Component {
 
 
         <div className={tabs === "work"? "tabcontent active" : "inactive"} id="work">
-          <h1 className="heading">Work</h1>
           <div>
             <h3 className="info-location">Eventbase Technology</h3>
             <p className="info"> 
@@ -103,7 +101,6 @@ class Experience extends Component {
 
 
         <div className={tabs === "skills"? "tabcontent active" : "inactive"} id="skills">
-          <h1 className="heading">Skills</h1>
           <ul className="skills">
             <li>
               <em>git</em>

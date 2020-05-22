@@ -10,7 +10,10 @@ class Portfolio extends Component {
           <ul className="projects">
             <Fade left>
             <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/calvinc03/Discord-Bot"><img className="project-pic" src="https://img.icons8.com/bubbles/500/000000/discord-logo.png" alt="discord-bot"/></a>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/calvinc03/Discord-Bot">
+                <div className="hover-github"><h4>Github</h4></div>
+                <img className="project-pic" src="https://media.giphy.com/media/igsVJZ6i3ob4y0jKgU/giphy.gif" alt="discord-bot"/>
+              </a>
               <div className="project-info">
                 <h3>Discord Bot</h3>
                 <p>A client bot to enhance the daily functions and messaging platform of the Discord Application. 
@@ -24,7 +27,10 @@ class Portfolio extends Component {
             </Fade>
             <Fade left>
             <li>
-              <a target="_blank" rel="noopener noreferrer" href="https://github.com/calvinc03/FTP-Application"><img className="project-pic" src="https://img.icons8.com/office/480/000000/ftp.png" alt="ftp"/></a>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/calvinc03/FTP-Application">
+                <div className="hover-github"><h4>Github</h4></div>
+                <img className="project-pic" src="https://media.giphy.com/media/lo4hWSPgBJLlUjGYeK/giphy.gif" alt="ftp"/>
+              </a>
               <div className="project-info">
                 <h3>FTP Server</h3>
                 <p>
@@ -41,7 +47,10 @@ class Portfolio extends Component {
             </Fade>
             <Fade left>
             <li>
-            <a target="_blank" rel="noopener noreferrer" href="https://github.com/calvinc03/Bus-Application"><img className="project-pic" src="https://img.icons8.com/bubbles/500/000000/bus.png" alt="bus"/></a>
+            <a target="_blank" rel="noopener noreferrer" href="https://github.com/calvinc03/Bus-Application">
+              <div className="hover-github"><h4>Github</h4></div>
+              <img className="project-pic" src="https://media.giphy.com/media/LSdd8cnhNgFGGZkpyJ/giphy.gif" alt="bus"/>
+            </a>
               <div className="project-info">
                 <h3>Buses R Us</h3>
                 <p>

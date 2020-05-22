@@ -16,25 +16,23 @@ class App extends Component {
         document.getElementById("container").style.display='block';
         document.getElementById("home").style.display='block';
         document.getElementById("intro-screen").style.display='none';
-      }, 5000);
+      }, 3800);
   }
 
   render() {
     return (
       <div className="app" onLoad={() => this.showPage()}>
         <Intro />
-        <div id="body-container">
-          <div id="home-background">
-            <Particle />
-          </div>
-          <Header/>
-          <div id="container">
-            <About/>
-            <Experience/>
-            <Portfolio/>
-            <Footer/>
-          </div>
-        </div> 
+        <div id="home-background">
+          <Particle />
+        </div>
+        <Header/>
+        <div id="container">
+          <About/>
+          <Experience/>
+          <Portfolio/>
+          <Footer/>
+        </div>
       </div>
     );
   }

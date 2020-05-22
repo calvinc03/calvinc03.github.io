@@ -1,27 +1,17 @@
 import React, { Component } from 'react';
-import './css/layout.css'
 
 class Intro extends Component {
    render() {
       return (
         <div id="intro-screen">
-            <div className="number-counter">
-                <div className="first-num">1</div>
-                <div className="box second-number"></div>
-                <div className="box third-number"></div>
-                <div className="percent">%</div>
+            <div className="intro-box">
+                <div className="box-top"></div>
+                <div className="box-left"></div>
+                <div className="box-right"></div>
+                <div className="box-bottom"></div>
+                <h1>Calvin Chen</h1>
             </div>
-            <div className="mario-gif">
-                <div className="mario-jump">
-                    <div className="mario-run">
-                        <img src="https://i.imgur.com/QxcssS5.gif" alt="walking mario" />
-                    </div>
-                </div>
-            </div>
-            <div className="progress-bar">
-                <div className="moving-bar"></div>
-                <h2>JUMP</h2>
-            </div>
+            <h2>Website Portfolio</h2>
         </div>
       );
    }

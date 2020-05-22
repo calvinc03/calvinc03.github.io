@@ -1,0 +1,787 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+   scroll-behavior: smooth;
+}
+
+body {
+   margin: 0;
+   bottom: 0;
+}
+
+#intro-screen {
+   background-color: black;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   z-index: 100;
+   text-align: center;
+   animation: fade-in 2s 2s reverse;
+}
+
+.intro-box h1 {
+   color: white;
+   padding: 0;
+   margin: 0;
+   font-family: 'Jost', sans-serif;
+   animation: fade-in 2s steps(1) 1;
+}
+
+#intro-screen h2 {
+   color: white;
+   font-family: 'Nunito', sans-serif;
+   margin-top: 15px;
+}
+
+
+
+div.intro-box {
+   display: inline-block;
+   margin-top: 45vh;
+   padding: 15px;
+   
+   background-repeat: no-repeat;
+   background-image:   linear-gradient(to right, #C9C9C9 100%, #C9C9C9 100%),
+                       linear-gradient(to bottom, #C9C9C9 100%, #C9C9C9 100%),
+                       linear-gradient(to right, #C9C9C9 100%, #C9C9C9 100%),
+                       linear-gradient(to bottom, #C9C9C9 100%, #C9C9C9 100%);
+   background-size:    100% 3px,
+                       3px 100%,
+                       100% 3px,
+                       3px 100%;
+   background-position:    0 0,
+                           100% 0,
+                           100% 100%,
+                           0 100%;
+   animation:  bg 2s cubic-bezier(0.19, 1, 0.22, 1) 1;
+}
+
+
+#home-background {
+   position: fixed;
+   height: 100%;
+   width: 100%;
+   /* background: url(../images/header-background.jpg) no-repeat top center;
+   background-size: cover !important;
+   background-attachment: fixed;
+   -webkit-background-size: cover !important; */
+   background-color: black;
+   z-index: -1;
+}
+
+
+/* A. Header Styling */
+header {
+   text-align: center;
+   top: 0;
+   left: 0;
+   right: 0;
+   outline: 0;
+   width: 100%;
+   height: 100vh;
+   position: relative;
+}
+
+#home {
+   display: none;
+}
+
+#nav-wrap {
+   top: 0;
+   left: 0;
+   width: 100%;
+   position: fixed;
+   z-index: 10000; 
+   text-align: center;
+}
+
+.inactive-nav {
+   animation: hide 0.5s;
+   display: none;
+}
+
+.nav {
+   width: 50%;  
+   min-width: 350px;
+   display: inline-flex;
+   justify-content: space-between;
+   list-style: none;
+   padding-left: 0;
+   align-items: center;
+   height: 80px;
+}
+
+.homebutton {
+   border: white 2px solid;
+   padding: 10px;
+   font-family: 'Source Sans Pro', sans-serif;
+   color: white;
+}
+
+.homebutton:hover {
+   color: orange;
+}
+
+.menu-bar {
+   position: relative;
+   overflow: hidden;
+   padding-inline-start: 0;
+   width: 40%;
+   min-width: 300px;
+}
+
+.menu-animation {
+   background-color: white;
+   border-radius: 2em;
+   animation: slide-left 0.5s;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+}
+
+
+
+.menu-button {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   background-color: white;
+   cursor: pointer;
+   outline: 0;
+}
+
+
+.nav img {
+   background-color: white;
+   border-radius: 50%;
+   cursor: pointer;
+}
+
+.nav li {
+   display: inline-block;
+   padding: 10px 10px;
+   font-family: 'Source Sans Pro', sans-serif;
+}
+
+.nav li a {
+   color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none
+}
+
+a.smoothscroll:hover {
+   color: orange;
+}
+
+
+.row-banner {
+   animation: fade-in 2s 1;
+   z-index: 10;
+   position: relative;
+   margin-top: 25vh;
+   width: 50%;
+   min-width: 350px;
+   display: inline-block;
+   text-align: left;
+}
+
+.banner-text {
+   color: white;
+   display: inline-block;
+}
+
+.banner-text .Typewriter, .banner-text h1 {
+   color: white;
+   font-family: 'Jost', sans-serif;
+   font-size: calc(30px + 2.5vw);
+   margin-bottom: 20px;
+}
+
+.banner-text h1 {
+   margin-top: 0px;
+}
+
+.banner-text h3 {
+   display: inline-block;
+   font-family: 'Nunito', sans-serif;
+   font-weight: 200;
+   font-size: calc(10px + 0.55vw);
+}
+
+.social {
+   display: inline-flex;
+   justify-content: center;
+   list-style: none;
+   padding: 0;
+}
+
+.social li {
+   margin: 0;
+   margin-right: 5px;
+}
+
+.social li a img {
+   width: 30px;
+   height: 30px;
+}
+
+.social li:hover {
+   transform: translateY(-8px);
+}
+
+.button-down {
+   z-index: 10;
+   position: relative;
+   margin-top: 10vh;
+   width: 51%;
+   min-width: 350px;
+   display: inline-block;
+   border-top: rgb(20, 22, 22) solid 8px;
+   animation: fade-in 2s 1;
+}
+
+.button-down a img {
+   width: 50px;
+   height: 50px;
+   border-radius: 50%;
+   background-color: grey;
+   margin-top: -29px;
+}
+
+.button-down a img:hover {
+   background-color: rgb(223, 182, 105);
+}
+
+/* General Layout */
+
+#container {
+   display: none;
+}
+
+.inactive {
+   display: none;
+}
+
+/* About Section */
+
+#about {
+   display: inline-block;
+   width: 100%;
+   padding: 50px 0px;
+   text-align: center;
+}
+
+#about .row {
+   display: inline-flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   box-sizing: border-box;
+   width: 55%;
+   min-width: 350px;
+   text-align: left;
+   padding: 30px;
+   align-items: top;
+}
+
+img.profile-pic {
+   width: 35%;
+   min-width: 300px;
+   overflow: hidden;
+   height: calc(4 * 19vw / 3);
+   min-height: 400px;
+}
+
+.about-info {
+   width: 60%;
+   min-width: 300px;
+   justify-content: space-around;
+}
+
+.about-info .row .contact-details{
+   width: 55%;
+   text-align: left;
+}
+
+.about-info h2 {
+   color: white;
+   font-family: 'Jost', sans-serif;
+   font-weight: 100;
+   font-size: calc(0.40vw + 20px);
+   margin-top: 0;
+}
+
+.about-info p {
+   color: rgb(224, 218, 218);
+   font-family: 'Nunito', sans-serif;
+   font-size: calc(0.12vw + 15px);
+   width: 90%;
+}
+
+.about-info .row-contact .contact-details .contact {
+   margin-top: 0;
+}
+
+.about-info .row-contact .contact-details .contact a {
+   color: rgb(224, 218, 218);
+}
+
+.about-info .row-contact .contact-details .contact a:hover {
+   color: rgb(57, 93, 212)
+}
+
+.about-info .row-contact .contact-details .contact span {
+   font-size: 20px;
+}
+
+.about-info .row-contact .download {
+   padding-top: 10px;
+   width: 45%;
+   box-sizing: border-box;
+   font-family: 'Nunito', sans-serif;
+   font-size: 14px;
+}
+
+.download a {
+   margin-top: 10px;
+   text-align: center;
+   padding: 10px;
+   background-color: rgb(105, 97, 87);
+   border-radius: 0.25em;
+}
+
+.download a:hover {
+   background-color: white;
+   color: rgb(105, 97, 87);
+}
+
+/* Experience Section */
+#resume {
+   width: 100%;
+   display: inline-block;
+   text-align: center;
+   padding: 30px 0 80px 0;
+}
+
+#resume .row {
+   width: 42%;
+   min-width: 350px;
+   text-align: left;
+   display: inline-block;
+   z-index: 10000;
+   padding: 0 30px;
+   box-sizing: border-box;
+   color: white;
+}
+
+.tab {
+   display: flex;
+   justify-content: left;
+   list-style: none;
+   padding-inline-start: 0;
+}
+
+ul.tab li {
+   margin-right: 40px;
+}
+
+ul.tab li.active div.underline {
+   border: orange 2px solid;
+}
+
+ul.tab li:hover div.underline {
+   border: orange 2px solid;
+   animation: underline-left 0.25s;
+}
+
+
+.tablinks {
+   cursor: pointer;
+   padding: 0;
+   text-transform: uppercase;
+   font-family: 'Jost', sans-serif;
+   font-size: 18px;
+   
+}
+
+
+.tabcontent {
+   width: 100%;
+   min-width: 300px;
+   margin-top: 35px;
+   padding-bottom: 30px;
+}
+
+h3.info-location {
+   font-family: 'Jost', sans-serif;
+   font-size: calc(0.9vw + 15px);
+   font-weight: 600;
+}
+
+em.title {
+   padding-right: 5px;
+   font-size: calc(0.40vw + 12px);
+   font-family: 'Jost', sans-serif;
+}
+
+span.date {
+   padding-left: 5px;
+   font-size: calc(0.40vw + 12px);
+   font-family: 'Jost', sans-serif;
+}
+
+.expand {
+   cursor: pointer;
+   padding: 18px;
+   width: 100%;
+   border: none;
+   text-align: left;
+   outline: none;
+   font-size: calc(0.15vw + 15px);
+   font-weight: bold;
+   font-family: 'Jost', sans-serif;
+}
+ 
+.expand:hover {
+   background-color: grey;
+}
+
+.courses {
+   width: 100%;
+   border-radius: 1em;
+}
+
+.courses p {
+   background-color: black;
+   margin: 0;
+   padding: 10px;
+   line-height: 1.5;
+   font-family: 'Nunito', sans-serif;
+   font-size: calc(0.12vw + 15px);
+}
+
+ul.work-info {
+   width: 100%;
+   font-family: 'Nunito', sans-serif;
+   line-height: 1.5;
+   padding-inline-start: 20px;
+   list-style: square;
+   box-sizing: border-box;
+}
+
+ul.work-info li {
+   padding: 5px 0;
+   font-size: calc(0.12vw + 15px);
+}
+
+ul.skills {
+   padding-inline-start: 0;
+   list-style: none;
+}
+
+ul.skills li em {
+   text-transform: uppercase;
+   font-family: 'Noto Sans JP', sans-serif;
+   font-style: normal;
+}
+
+ul.skills li div.skills-bar {
+   width: 100%;
+   height: 30px;
+   margin: 10px 0 20px 0;
+   border-radius: 1em;
+   background-color: rgb(133, 117, 126);
+}
+
+.skills-bar .skills-bar-color {
+   height: 100%;
+   border-radius: 1em;
+   background-color: rgb(50, 187, 112);
+}
+
+/* Projects page */
+
+#portfolio {
+   display: inline-block;
+   width: 100%;
+   padding: 10px 0 100px;
+   text-align: center;
+}
+
+#portfolio .row {
+   width: 60%;
+   min-width: 350px;
+   display: inline-block;
+}
+
+#portfolio .row h1 {
+   font-family: 'Jost', sans-serif;
+   font-weight: 500;
+   color: white;
+   height: 40px;
+   width: 200px;
+   display: inline-block;
+   padding: 0;
+   margin-top: 20px;
+   padding-top: 5px;
+   text-transform: uppercase;
+}
+
+.row ul.projects {
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   display: inline-flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+   align-items: flex-start;
+}
+
+.row ul.projects li {
+   width: 30%;
+   text-align: center;
+   background-color: white;
+   min-width: 350px;
+   margin: 20px 0;
+   position: relative;
+}
+
+.row ul.projects li a:hover div.hover-github {
+   position: absolute;
+   width: 30%;
+   min-width: 350px;
+   height: calc(3 * 4vw / 4 + 175px);
+   z-index: 100;
+   box-sizing: border-box;
+   background-color: rgba(0, 0, 0, 0.692);
+}
+
+.row ul.projects li a div.hover-github h4 {
+   display: none;
+}
+
+.row ul.projects li a:hover div.hover-github h4 {
+   padding: 0;
+   margin: 0;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   font-family: 'Nunito', sans-serif;
+   display: block;
+}
+
+li img.project-pic {
+   width: 100%;
+   height: calc(3 * 4vw / 4 + 175px);
+   
+}
+
+
+li div.project-info {
+   text-align: left;
+   width: 80%;
+   display: inline-block;
+}
+
+.project-info h3 {
+   font-family: 'Jost', sans-serif;
+   font-size: 23px;
+   margin: 20px 0 10px 0;
+   color: black;
+}
+
+.project-info p {
+   font-family: 'Nunito', sans-serif;
+   color: rgb(68, 63, 63);
+   font-size: calc(0.1vw + 15px);
+   font-weight: 600;
+   margin: 0 0 10px 0;
+}
+
+.project-info a img{
+   width: 35px;
+}
+
+.language-container {
+   margin-bottom: 10px;
+}
+
+.language-container span.languages {
+   margin-right: 10px;
+   background-color: #fbeec1;
+   padding: 0 5px;
+   font-weight: 100;
+   font-family: 'Jost', sans-serif;
+}
+
+/* FOOTER SECTION*/
+
+footer {
+   display: inline-block;
+   width: 100%;
+   text-align: center;
+   animation: fade-in 0.1s steps(1);
+   background-color: black;
+   height: calc(10vh - 20px);
+}
+
+.button-top {
+   position: fixed;
+   top: 90%;
+   left: 85%;
+   background-color: white;
+   border-radius: 50%;
+   width: 35px;
+   height: 35px;
+}
+
+img.to-top {
+   width: 50px;
+   height: 50px;
+   transform: translate(-7.5px, -7.5px);
+}
+
+.footer-contact {
+   text-align: center;
+}
+
+.footer-contact p {
+   font-family: "Jost", sans-serif;
+   font-size: 20px;
+   min-width: 300px;
+   width: 20%;
+   display: inline-block;
+}
+
+.footer-contact ul.footer-social {
+   list-style: none;
+   position: fixed;
+   top: 60%;
+   left: 5%;
+   padding-inline-start: 0;
+   border-left: white 2px solid;
+   padding-left: 10px;
+}
+
+.footer-contact ul.footer-social li {
+   margin: 5px 0;
+   padding: 0;
+}
+
+.footer-contact ul.footer-social li:after {
+   color: white;
+   display: inline-block;
+   position: absolute;
+   width: 100px;
+   margin: 7px;
+   font-family: 'Nunito', sans-serif;
+   font-size: 13px;
+   text-align: left;
+}
+
+.footer-contact ul.footer-social li:nth-child(1):hover:after {
+   content: "(604) 218-7779"
+}
+
+.footer-contact ul.footer-social li:nth-child(2):hover:after {
+   content: "chencalvin.15@gmail.com"
+}
+
+.footer-contact ul.footer-social li:nth-child(4):hover:after {
+   content: "calvinchen125"
+}
+
+.footer-contact ul.footer-social li:nth-child(5):hover:after {
+   content: "calvin.chen"
+}
+
+.footer-contact ul.footer-social li:nth-child(6):hover:after {
+   content: "calvinc03"
+}
+
+.footer-contact ul.footer-social li:nth-child(7):hover:after {
+   content: "calvinchen8"
+}
+
+.footer-contact ul.footer-social li img {
+   padding: 0;
+   width: 30px;
+   height: 30px;
+}
+
+
+
+footer p {
+   color: white;
+   margin-top: 0;
+   font-family: 'Jost', sans-serif;
+   font-size: 10px;
+   padding: 10px 0;
+}
+
+
+/* ANIMATIONS */
+
+@keyframes bounce {
+   15% {transform: translateY(-10px)}
+   40% {transform: translateY(0px)}
+   55% {transform: translateY(-5px)}
+   70% {transform: translateY(0px)}
+   85% {transform: translateY(-2px)}
+   100% {transform: translateY(0px)}
+}
+
+@keyframes fade-in {
+   from {opacity: 0}
+   to {opacity: 1}
+}
+
+@keyframes underline-left {
+   from {width: 0} to {width: 95%}
+}
+
+@keyframes slide-left {
+   from {width: 0}
+   to {width: 100%}
+}
+
+@keyframes bg {
+   0% {
+       background-size:    0 3px,
+                           3px 0,
+                           0 3px,
+                           3px 0;
+   }
+   25% {
+       background-size:    100% 3px,
+                           3px 0,
+                           0 3px,
+                           3px 0;
+   }
+   50% {
+       background-size:    100% 3px,
+                           3px 100%,
+                           0 3px,
+                           3px 0;
+   }
+   75% {
+       background-size:    100% 3px,
+                           3px 100%,
+                           100% 3px,
+                           3px 0;
+   }
+   100% {
+       background-size:    100% 3px,
+                           3px 100%,
+                           100% 3px,
+                           3px 100%;
+   }
+}
