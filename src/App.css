@@ -20,7 +20,7 @@ body {
    height: 100%;
    z-index: 100;
    text-align: center;
-   animation: fade-in 2s 2s reverse;
+   animation: fade-in 2.5s 2s reverse;
 }
 
 .intro-box h1 {
@@ -123,7 +123,7 @@ header {
 }
 
 .homebutton:hover {
-   color: orange;
+   color: rgb(197, 176, 137);
 }
 
 .menu-bar {
@@ -144,8 +144,6 @@ header {
    z-index: -1;
 }
 
-
-
 .menu-button {
    width: 40px;
    height: 40px;
@@ -154,7 +152,6 @@ header {
    cursor: pointer;
    outline: 0;
 }
-
 
 .nav img {
    background-color: white;
@@ -178,7 +175,7 @@ a {
 }
 
 a.smoothscroll:hover {
-   color: orange;
+   color: rgb(197, 176, 137);
 }
 
 
@@ -386,6 +383,7 @@ img.profile-pic {
    justify-content: left;
    list-style: none;
    padding-inline-start: 0;
+   padding-left: 0;
 }
 
 ul.tab li {
@@ -401,16 +399,13 @@ ul.tab li:hover div.underline {
    animation: underline-left 0.25s;
 }
 
-
 .tablinks {
    cursor: pointer;
    padding: 0;
    text-transform: uppercase;
    font-family: 'Jost', sans-serif;
    font-size: 18px;
-   
 }
-
 
 .tabcontent {
    width: 100%;
@@ -483,6 +478,7 @@ ul.work-info li {
 
 ul.skills {
    padding-inline-start: 0;
+   padding-left: 0;
    list-style: none;
 }
 
@@ -555,8 +551,7 @@ ul.skills li div.skills-bar {
 
 .row ul.projects li a:hover div.hover-github {
    position: absolute;
-   width: 30%;
-   min-width: 350px;
+   width: 100%;
    height: calc(3 * 4vw / 4 + 175px);
    z-index: 100;
    box-sizing: border-box;

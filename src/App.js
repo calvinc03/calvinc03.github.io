@@ -16,7 +16,7 @@ class App extends Component {
         document.getElementById("container").style.display='block';
         document.getElementById("home").style.display='block';
         document.getElementById("intro-screen").style.display='none';
-      }, 3800);
+      }, 3500);
   }
 
   render() {

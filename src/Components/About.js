@@ -10,9 +10,12 @@ class About extends Component {
             <img className="profile-pic"  src="https://www.dropbox.com/s/cd773atqe4i7b08/profile.jpg?raw=1" alt="Calvin Chen Profile Pic" />
             <div className="about-info">
                <h2>About Me</h2>
-               <p>As a student of UBC, I am constantly honing my skills in software and web development. Insert text about how I am a 
-                  hardworking individual and that I am developing skills as this industry is constantly evolving. <br/> <br/>
-                  In my free time, I have no idea what to write but I'm just filling in the space rn. My profile pic needs changing too :(
+               <p>As a student at the <b><a href="https://www.ubc.ca/">University of British Columbia</a></b>, I am passionate 
+                  about learning, exploring and developing new applications in this ever evolving industry. I enjoy problem solving 
+                  and identifying areas in which we can further enhance our daily lives with software applcations. <br/> <br/>
+                  Through my most recent internship at <b><a href="https://www.eventbase.com/">Eventbase</a></b>, I have learned 
+                  how versatile apps and various software can be for end users. My goal is to further develop technologies so 
+                  that people of all ages will have the same ease and versatility in programs during their everyday use.
                </p>
                <div className="row-contact">
                   <div className="contact-details">
@@ -23,8 +26,7 @@ class About extends Component {
                      </p>
                   </div>
                   <div className="download">
-                     {/* TODO maybe export as pdf*/}
-                     <a href="https://docs.google.com/document/d/1xxoSXlCWQ0m9eIiHT-5xeqStrqWsVt-LZKD0Tv4bxpk/edit?usp=sharing" target="_blank" rel="noopener noreferrer" className="button">View Resume</a>
+                     <a href="https://www.dropbox.com/s/uk0juh4mxihgq5i/Resume.pdf?raw=1" target="_blank" rel="noopener noreferrer" className="button">View Resume</a>
                   </div>
                </div>
             </div>
