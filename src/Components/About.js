@@ -26,7 +26,7 @@ class About extends Component {
                      </p>
                   </div>
                   <div className="download">
-                     <a href="https://www.dropbox.com/s/uk0juh4mxihgq5i/Resume.pdf?raw=1" target="_blank" rel="noopener noreferrer" className="button">View Resume</a>
+                     <a href="https://www.dropbox.com/s/zh3qyhhpn0zl1kt/Resume.pdf?raw=1" target="_blank" rel="noopener noreferrer" className="button">View Resume</a>
                   </div>
                </div>
             </div>

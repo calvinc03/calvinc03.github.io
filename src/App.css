@@ -468,9 +468,10 @@ ul.work-info {
    width: 100%;
    font-family: 'Nunito', sans-serif;
    line-height: 1.5;
-   padding-inline-start: 20px;
    list-style: square;
    box-sizing: border-box;
+   background-color: black;
+   padding: 10px 10px 10px 30px;
 }
 
 ul.work-info li {
@@ -710,8 +711,8 @@ img.to-top {
 
 .footer-contact ul.footer-social li img {
    padding: 0;
-   width: 30px;
-   height: 30px;
+   width: calc(2vh + 10px);
+   height: calc(2vh + 10px);
 }
 
 
