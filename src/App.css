@@ -64,11 +64,7 @@ div.intro-box {
 #home-background {
    position: fixed;
    height: 100%;
-   width: 100%;
-   /* background: url(../images/header-background.jpg) no-repeat top center;
-   background-size: cover !important;
-   background-attachment: fixed;
-   -webkit-background-size: cover !important; */
+   width: 100vw;
    background-color: black;
    z-index: -1;
 }
@@ -93,7 +89,7 @@ header {
 #nav-wrap {
    top: 0;
    left: 0;
-   width: 100%;
+   width: 100vw;
    position: fixed;
    z-index: 10000; 
    text-align: center;
@@ -284,16 +280,16 @@ a.smoothscroll:hover {
    width: 55%;
    min-width: 350px;
    text-align: left;
-   margin: 30px;
+   margin: 30px 0px;
    align-items: center;
 }
 
 img.profile-pic {
-   width: 35%;
+   width: 30%;
    min-width: 250px;
    overflow: hidden;
    height: calc(4 * 19vw / 3);
-   min-height: 333px;
+   min-height: 380px;
    margin: 10px 0;
    box-sizing: border-box;
 }
@@ -540,7 +536,6 @@ ul.skills li div.skills-bar {
    display: inline-flex;
    justify-content: space-around;
    flex-wrap: wrap;
-   align-items: flex-start;
 }
 
 .row ul.projects li {
