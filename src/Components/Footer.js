@@ -5,7 +5,6 @@ class Footer extends Component {
     super(props);
 
     this.state = {
-      hover: false,
       visible: false
     };
  }
@@ -32,20 +31,13 @@ handleScroll = () => {
     });
 };
 
- changeHover() {
-   this.setState({
-     hover: !this.state.hover
-   })
- }
-
-  render() {
-    const { hover, visible } = this.state;
+render() {
+    const { visible } = this.state;
     const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
     return (
       <footer>
         <div className={visible? "button-top" : "inactive"}>
           <a href="#home">
-            {/* <img className={hover? "inactive" : "to-top"} src="https://img.icons8.com/ios-glyphs/60/000000/circled-chevron-up.png"/> */}
             <img className="to-top" src="https://img.icons8.com/windows/60/000000/circled-chevron-up.png"/>
           </a>
         </div>

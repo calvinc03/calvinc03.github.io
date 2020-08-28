@@ -8,6 +8,44 @@ class Portfolio extends Component {
         <div className="row">
           <h1>Projects</h1>
           <ul className="projects">
+          <Fade left>
+            <li>
+              <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.calvinchen.firstaidlearning">
+                <div className="hover-github"><h4>Google Play Store</h4></div>
+                <img className="project-pic" src="https://media.giphy.com/media/JsbQHL5JHHi0PbM84m/giphy.gif" alt="discord-bot"/>
+              </a>
+              <div className="project-info">
+                <h3>First Aid Study</h3>
+                <p>An individually developed Android application on Google Play Store to help users get a better understanding of First Aid skills and techniques. 
+                  The app allows users to read passages and test themselves through quizzes.</p>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/calvinc03/FirstAidEdAndroidApp"><img src="https://img.icons8.com/material-sharp/48/000000/github.png" alt="github"/></a>
+                <div className="language-container">
+                  <span className="languages">Kotlin</span>
+                </div>
+              </div>
+            </li>
+            </Fade>
+            <Fade left>
+            <li>
+              <a target="_blank" rel="noopener noreferrer" href="https://formtracker776.netlify.app/">
+                <div className="hover-github"><h4>Website</h4></div>
+                <img className="project-pic" src="https://media.giphy.com/media/lQ0ICnM0mA58EtKrMW/giphy.gif" alt="discord-bot"/>
+              </a>
+              <div className="project-info">
+                <h3>Form and Payment Tracker</h3>
+                <p>
+                  A front and backend appllication that allows admin users to track members' forms and payments. Basic authentication is used to ensure
+                  privacy and automated emails are sent to members that have overdue payments and forms.
+                </p>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/calvinc03/emails_sja"><img src="https://img.icons8.com/material-sharp/48/000000/github.png" alt="github"/></a>
+                <div className="language-container">
+                  <span className="languages">JavaScript</span>
+                  <span className="languages">MySQL</span>
+                  <span className="languages">Python</span>
+                </div>
+              </div>
+            </li>
+            </Fade>
             <Fade left>
             <li>
               <a target="_blank" rel="noopener noreferrer" href="https://github.com/calvinc03/Discord-Bot">
