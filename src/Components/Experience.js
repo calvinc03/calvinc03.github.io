@@ -135,7 +135,7 @@ class Experience extends Component {
             <li>
               <em>c/c++</em>
               <div className="skills-bar">
-                <div className="skills-bar-color" style={{width: '65%'}} ></div>
+                <div className="skills-bar-color" style={{width: '85%'}} ></div>
               </div>
             </li>
           </ul>

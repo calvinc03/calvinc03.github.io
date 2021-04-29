@@ -7,7 +7,7 @@ class About extends Component {
       <section id="about">
          <Fade bottom>
          <div className="row">
-            <img className="profile-pic"  src="https://www.dropbox.com/s/jshryg9mumwquex/IMG_9504.JPG?raw=1" alt="Calvin Chen Profile Pic" />
+            <img className="profile-pic"  src="https://www.dropbox.com/s/abkfp6of21tmyi1/IMG_9504.JPG?raw=1" alt="Calvin Chen Profile Pic" />
             <div className="about-info">
                <h2>About Me</h2>
                <p>As a student at the <b><a href="https://www.ubc.ca/">University of British Columbia</a></b>, I am passionate 
@@ -26,7 +26,7 @@ class About extends Component {
                      </p>
                   </div>
                   <div className="download">
-                     <a href="https://www.dropbox.com/s/ttjdcdhye62kdl0/Internship%20Resume.pdf?raw=1" target="_blank" rel="noopener noreferrer" className="button">View Resume</a>
+                     <a href="https://www.dropbox.com/s/1i81dpocz4dtf79/Resume.pdf?raw=1" target="_blank" rel="noopener noreferrer" className="button">View Resume</a>
                   </div>
                </div>
             </div>

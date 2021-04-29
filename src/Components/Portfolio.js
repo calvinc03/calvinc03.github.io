@@ -10,6 +10,24 @@ class Portfolio extends Component {
           <ul className="projects">
           <Fade left>
             <li>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/calvinc03/FeastorFamine">
+                <div className="hover-github"><h4>Github</h4></div>
+                <img className="project-pic" src="https://media.giphy.com/media/aaOkIg770P3R4bPkCG/giphy.gif" alt="FeastorFamine"/>
+              </a>
+              <div className="project-info">
+                <h3>Feast or Famine</h3>
+                <p>A tower defense type game developed in C++ using ECS archetecture design patterns. Users can place up to 7 types of different units all with different effects.
+                  Monsters run through the field using A* search to find the fastest path to the village.
+                </p>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/calvinc03/FirstAidEdAndroidApp"><img src="https://img.icons8.com/material-sharp/48/000000/github.png" alt="github"/></a>
+                <div className="language-container">
+                  <span className="languages">C++</span>
+                </div>
+              </div>
+            </li>
+          </Fade>  
+          <Fade left>
+            <li>
               <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.calvinchen.firstaidlearning">
                 <div className="hover-github"><h4>Google Play Store</h4></div>
                 <img className="project-pic" src="https://media.giphy.com/media/JsbQHL5JHHi0PbM84m/giphy.gif" alt="discord-bot"/>
