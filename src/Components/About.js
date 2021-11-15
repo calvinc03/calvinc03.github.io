@@ -13,9 +13,9 @@ class About extends Component {
                <p>As a student at the <b><a href="https://www.ubc.ca/">University of British Columbia</a></b>, I am passionate 
                   about learning, exploring and developing new technologies in this ever evolving industry. I enjoy problem solving 
                   and identifying areas in which we can further enhance our daily lives with software applications. <br/> <br/>
-                  Through my most recent internship at <b><a href="https://www.eventbase.com/">Eventbase</a></b>, I have learned 
-                  how versatile apps and various software can be for end users. My goal is to further develop applications so 
-                  that people of all ages will have the same ease and versatility in their everyday use.
+                  Currently at <b><a href="https://rewind.com/">Rewind</a></b>, I have learned 
+                  how integral backing up data is for for e-commerce business owners. My goal is to keep developing applications and services
+                  to allow online owners to securely manage their products.
                </p>
                <div className="row-contact">
                   <div className="contact-details">

@@ -78,6 +78,25 @@ class Experience extends Component {
 
         <div className={tabs === "work"? "tabcontent active" : "inactive"} id="work">
           <div>
+            <h3 className="info-location">Rewind</h3>
+            <p className="info"> 
+              <em className="title"> Software Developer</em>
+              <span>&bull;</span>
+              <span className="date">August 2021 - Present</span>
+            </p>
+            <ul className="work-info">
+              <li>
+                Designed and developed AWS lambdas functions to store backup procedures in DynamoDB and S3 services, ensuring that each client’s data can be readily restored
+              </li>
+              <li>
+                Implemented the usage of Cloudwatch alarms, customized logger and SNS to track a request from end to end and ensure that the proper groups are notified in case of an error
+              </li>
+              <li>
+              Maintained and integrated new features into Rewind web app, such as applying the correct add-ons and discounts using Stripe API to allow clients to smoothly checkout their desired subscription services
+              </li>
+            </ul>
+          </div>
+          <div>
             <h3 className="info-location">Eventbase Technology</h3>
             <p className="info"> 
               <em className="title"> Quality Assurance Engineer Intern</em>
