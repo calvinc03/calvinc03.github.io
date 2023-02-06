@@ -7,7 +7,7 @@ class About extends Component {
       <section id="about">
          <Fade bottom>
          <div className="row">
-            <img className="profile-pic"  src="https://www.dropbox.com/s/abkfp6of21tmyi1/IMG_9504.JPG?raw=1" alt="Calvin Chen Profile Pic" />
+            <img className="profile-pic"  src="https://www.dropbox.com/s/kfs88p540uu87ao/profile.jpg?raw=1" alt="Calvin Chen Profile Pic" />
             <div className="about-info">
                <h2>About Me</h2>
                <p>As a student at the <b><a href="https://www.ubc.ca/">University of British Columbia</a></b>, I am passionate 

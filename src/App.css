@@ -292,6 +292,7 @@ img.profile-pic {
    min-height: 380px;
    margin: 10px 0;
    box-sizing: border-box;
+   object-fit: cover;
 }
 
 .about-info {
